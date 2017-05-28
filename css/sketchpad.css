@@ -1,0 +1,62 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #dfdfd7;
+}
+
+div {
+	border: 1px solid black;
+}
+
+/* title header */
+h1 {
+	text-align: center;
+	color: #f8f8f8;
+	font-family: 'Kumar One', cursive;
+	font-size: 3.125em;
+	position: relative;
+	top: 20px;
+}
+
+#title {
+	width: 100%;
+	height: 5em;
+	background-color: #000;
+}
+
+/* reset button */
+#wrapper-button {
+	text-align: center;
+	background-color: #cd2f2c;
+}
+
+button {
+	margin: 0.416em;
+	border-radius: 0;
+	font-family: arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: 	#f0f0f0;
+	background-color: #09c;
+	border: 3px ridge #555;
+}
+
+.tile {
+	background-color: whitesmoke;
+	float: left;
+	margin-bottom: 0;
+}
+
+/* style added on hover */
+.color {
+	background-color: black;
+}
+
+/* container for the div elements */
+#wrapper {
+	width: 90%;
+	height: 90%;
+	margin: 5% auto;
+}
