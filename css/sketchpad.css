@@ -54,9 +54,14 @@ button {
 	background-color: black;
 }
 
+/* random color added on hover */
+.colored {
+
+}
+
 /* container for the div elements */
 #wrapper {
 	width: 90%;
-	height: 90%;
+	height: 80%;
 	margin: 5% auto;
 }
