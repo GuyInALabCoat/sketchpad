@@ -2,12 +2,10 @@
 	box-sizing: border-box;
 }
 
-body {
+body, html {
 	background-color: #dfdfd7;
-}
-
-div {
-	border: 1px solid black;
+	height: 100%;
+	width: 100%;
 }
 
 /* title header */
@@ -61,7 +59,7 @@ button {
 
 /* container for the div elements */
 #wrapper {
+	position: relative;
 	width: 90%;
-	height: 80%;
 	margin: 5% auto;
 }

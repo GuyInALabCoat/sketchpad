@@ -2,11 +2,40 @@ $(document).ready(function() {
 	
 	generateGrid(16);
 	
-	run();
+	$('button').on('click', reset);
+	
 });
 
-// color when hover over and listen for button
-function run(){
+// when called, prompts user, removes previous grid and creates new one
+function reset() {
+	
+	$('.tile').removeClass('colored');	
+	
+	var length = prompt("Please enter the number of boxes per side.", "16");	
+	
+	if (length > 0 && length < 100) {
+
+		generateGrid(length);
+	
+	} else {
+		
+		generateGrid(16);	
+
+	}
+}
+
+// creates the square grid using the number input.
+function generateGrid(number){
+	
+	$('#wrapper').empty();
+
+	for (var i = 0; i < (number * number); i++) {
+		
+		$('#wrapper').append('<div class="tile"></div>');
+	}
+	
+	$('.tile').css({'width': 'calc(100% / ' + number + ')', 'padding-top': 'calc(100% / ' + number + ')'});	
+	
 	
 	var tile = $('.tile');
 	
@@ -31,49 +60,6 @@ function run(){
 			
 		}
 	});
-	
-	$('button').on('click', reset);
-	
-}
-
-// creates the individual element in grid
-function createDiv() {
-	
-	return $('<div class="tile"></div>');
-	
-}
-
-// when called, prompts user, removes previous grid and creates new one
-function reset() {
-	
-	var length = +prompt("Please enter the number of boxes per side.");
-	
-	$('.tile').remove();
-	
-	if (length != null) {
-
-		generateGrid(length);
-	
-	} else {
-		
-		generateGrid(16);	
-
-	}
-	
-	run();
-
-}
-
-// creates the square grid using the number input.
-function generateGrid(number){
-
-	for (var i = 0; i < (number * number); i++) {
-		
-		$('#wrapper').append(createDiv());
-	}
-	
-	$('.tile').css({'width': 'calc(100% / ' + number + ')', 'padding-top': 'calc(100% / ' + number + ')'});	
-	
 }
 
 // darken or lighten an element's color
